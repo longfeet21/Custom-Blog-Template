@@ -1,0 +1,15 @@
+$primary_color: #494949;
+$text_light: rgb(247, 247, 247);
+
+@function set-text-color($color) {
+    @if (lightness($color) > 50) {
+        @return #333;
+    } @else {
+        @return $text_light;
+    }
+}
+
+@mixin set-bg($color) {
+    background-color: $color;
+    color: set-text-color($color);
+}

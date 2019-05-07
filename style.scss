@@ -1,0 +1,128 @@
+@import "./config";
+@import "./utils";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Poppins", sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 72px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    // background-color: $primary_color;
+    // color: $text_light;
+
+    .brand-logo {
+        // text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: bold;
+        // font-family: "Sofia", cursive;
+    }
+
+    .menu-bar {
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        li {
+            list-style: none;
+            height: 100%;
+            display: flex;
+            padding: 5px;
+
+            &:hover {
+                // background-color: rgba(255, 255, 255, 0.15);
+                opacity: 0.7;
+                transition: 0.25s;
+            }
+
+            a {
+                text-decoration: none;
+                color: $text_light;
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+}
+
+.showcase {
+    background: url("./img/bg.jpg") no-repeat center center/cover;
+    height: 100vh;
+    position: relative;
+
+    .dark-overlay {
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+
+        .container {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        h3 {
+            font-family: "Just Another Hand", cursive;
+            color: $text_light;
+            font-weight: lighter;
+            letter-spacing: 2px;
+            font-size: 7rem;
+        }
+
+        p {
+            font-family: "Montserrat", sans-serif;
+            color: $text_light;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+.content {
+    padding: 20px 0;
+
+    .post {
+        width: 100%;
+        height: 50vh;
+        display: flex;
+
+        &-thumbnail {
+            width: 50%;
+            display: flex;
+            min-width: 50%;
+            max-width: 50%;
+            overflow: hidden;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &-content {
+            width: 50%;
+            padding: 50px;
+        }
+    }
+}
+
+.popular {
+    width: 100%;
+    height: 35vh;
+    display: flex;
+    background-color: #fff;
+
+    &-item {
+        width: 25%;
+        display: flex;
+        min-width: 25%;
+        max-width: 25%;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+    }
+}
